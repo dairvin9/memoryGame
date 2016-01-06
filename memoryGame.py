@@ -5,7 +5,13 @@ f = open('quoteFile.txt', 'r')
 
 rawInput = f.read()
 
-words = rawInput.split()
+topics = rawInput.split('\n')
 
-for word in words:
-    print (word)
+for topic in topics:
+    words = topic.split(' ')
+    for word in words:
+        print(words)
+
+
+choice = input("What would you like to study? ")
+print (choice) 
